@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=58.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zspotify"
+version = "2.1.1"
+authors = [
+    {"name" = "Jonathan Salinas Vargas"},
+    {"name" = "Yuriy Kovrigin"},
+]
+description = "Spotify song downloader without injecting into the windows client"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["downloader", "music", "spotify", "zspotify"]
+license = {text = "GPL-3.0-only"}
+classifiers = [
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio",
+]
+dependencies = [
+    "librespot @ git+https://github.com/kokarare1212/librespot-python",
+    "appdirs",
+    "mutagen",
+    "music_tag",
+    "pydub",
+    "Pillow",
+    "tqdm",
+]
+
+[tool.setuptools]
+packages = ["zspotify"]
+
+[project.scripts]
+zspotify = "zspotify.__main__:main"
