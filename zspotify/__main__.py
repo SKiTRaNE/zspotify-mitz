@@ -115,7 +115,7 @@ class ZSpotify:
             "-md",
             "--music-dir",
             help="Folder to save the downloaded music files",
-            default=Path.home() / "Music" / "ZSpotify Music",
+            default=Path.home() / "Music", # / "ZSpotify Music",
         )
         parser.add_argument(
             "-pd",
